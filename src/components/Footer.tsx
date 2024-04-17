@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer() {
 	return (
-		<footer className="bg-bg-footer text-white w-full flex flex-col justify-between">
+		<footer className="bg-primary-blue text-white w-full flex flex-col justify-between">
 			<div className="flex w-full md:flex-row flex-col my-14 px-10 sm:px-20 md:px-24 lg:px-32 justify-between">
 				<h2 className="flex pb-10 md:p-0 items-center  sm:justify-center text-2xl font-normal font-Monoton">
 					Createnary
@@ -43,12 +43,12 @@ export default function Footer() {
 					</li>
 				</ul>
 			</div>
-			<p className="flex flex-col  text-center">
-				<hr className="hidden sm:inline " />
+			<div className="flex flex-col  text-center">
+				<div className="hidden sm:inline border border-primary-white"></div>
 				<span className="font-extralight text-center p-4">
 					&copy; Createnary 2024
 				</span>
-			</p>
+			</div>
 		</footer>
 	);
 }

@@ -26,8 +26,8 @@ const config = {
 				'section-one-bg-mobile': "url('/background-section-one-mobile.png')",
 			},
 			colors: {
-				'bg-color': '#F8F9FB',
-				'bg-footer': '#4A508E',
+				'primary-white': '#F8F9FB',
+				'primary-blue': '#4A508E',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
