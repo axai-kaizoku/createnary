@@ -28,6 +28,7 @@ const config = {
 			colors: {
 				'primary-white': '#F8F9FB',
 				'primary-blue': '#4A508E',
+				'slider-bg': '#CCCCCC',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

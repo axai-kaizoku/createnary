@@ -20,8 +20,8 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				{/* <Header />
-				<NavLinks /> */}
+				<Header />
+				<NavLinks />
 				<main className="bg-primary-white">{children}</main>
 				<Footer />
 			</body>

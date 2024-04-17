@@ -2,7 +2,7 @@ import { CustomButtonProps } from '@/types';
 import Link from 'next/link';
 
 export default function CustomButton({
-	href,
+	href = '/',
 	btnText,
 	bgColor,
 	textColor,

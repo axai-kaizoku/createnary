@@ -4,3 +4,8 @@ export interface CustomButtonProps {
 	bgColor: string;
 	textColor: string;
 }
+
+export interface CustomAccordionProps {
+	title: string;
+	description: string;
+}

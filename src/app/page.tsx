@@ -1,6 +1,10 @@
 import CustomButton from '@/components/CustomButton';
 import { CarouselPlugin } from '@/components/CarouselPlugin';
 import Image from 'next/image';
+import SearchInfluencer from '@/components/SearchInfluencer';
+import { CustomSlider } from '@/components/CustomSlider';
+import CustomAccordion from '@/components/CustomAccordion';
+import { frequentlyAskedQuestions } from '@/constants';
 
 export default function Home() {
 	return (
@@ -49,7 +53,7 @@ export default function Home() {
 				</div>
 			</section>
 			{/* Section Two */}
-			<section className="h-screen w-full bg-primary-blue text-primary-white">
+			<section className="h-fit w-full bg-primary-blue text-primary-white">
 				<div className="w-full flex flex-col gap-2 py-8 justify-center font-bold text-3xl items-center">
 					<h3 className="md:text-left text-center">
 						Your audience wants links
@@ -67,13 +71,95 @@ export default function Home() {
 				<div className="w-full flex justify-center items-center">
 					<CarouselPlugin />
 				</div>
-				<div className="w-full flex justify-center items-center py-8">
+				<div className="w-full flex justify-center items-center p-10">
 					<CustomButton
 						btnText="Try for free"
 						href="/detail"
 						bgColor="bg-primary-white"
-						textColor="text-primary-blue"
+						textColor="text-black font-medium"
 					/>
+				</div>
+			</section>
+			{/* Section Three */}
+			<section className="w-full h-fit bg-primary-white">
+				<h3 className="text-left pl-6 md:pl-0 md:text-center font-bold text-xl md:text-2xl pt-6 pb-0 md:pt-20 md:pb-20">
+					ESTIMATE EARNING POTENTIAL
+				</h3>
+				<div className="w-full flex md:flex-row flex-col justify-center items-center">
+					<div className="flex flex-col w-full px-6 md:p-0 md:w-2/5   md:pl-20 gap-4">
+						<div className="flex flex-col gap-5 md:gap-8 py-2 md:py-4">
+							<p className="font-medium">What kind of influencer are you?</p>
+							<SearchInfluencer />
+						</div>
+						<div className="flex flex-col gap-5 md:gap-8 py-2 md:py-4">
+							<p className="font-medium">How many followers do you have?</p>
+							<CustomSlider />
+						</div>
+						<div className="flex flex-col gap-5 md:gap-8 py-2 md:py-4">
+							<p className="font-medium">
+								How many products do you list monthly?
+							</p>
+							<CustomSlider />
+						</div>
+					</div>
+					<div className="w-full flex md:hidden justify-center items-center py-8 md:py-16">
+						<CustomButton
+							btnText="Calculate"
+							bgColor="bg-primary-blue"
+							textColor="text-primary-white"
+						/>
+					</div>
+					<div className="flex flex-row md:flex-col font-bold items-center text-center justify-around md:justify-center mt-8 gap-10 md:gap-28 w-2/6">
+						<div className="flex flex-col gap-3">
+							<h4 className="text-xl">Monthly Earning</h4>
+							<p className="text-2xl md:text-4xl text-primary-blue">₹12,000</p>
+						</div>
+						<div className="flex flex-col gap-3">
+							<h4 className="text-xl whitespace-break-spaces">
+								Yearly Earning
+							</h4>
+							<p className="text-2xl md:text-4xl text-primary-blue">
+								₹1,44,000
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="w-full hidden md:flex justify-center items-center py-16">
+					<CustomButton
+						btnText="Calculate"
+						bgColor="bg-primary-blue"
+						textColor="text-primary-white"
+					/>
+				</div>
+			</section>
+			{/* Section Four */}
+			<section className="bg-primary-white w-full h-fit">
+				<div>
+					<h3 className="font-bold text-xl md:text-2xl pl-6 md:pl-0 pt-10 pb-6 text-left md:text-center">
+						FREQUENTLY ASKED QUESTIONS
+					</h3>
+					<p className="text-center md:block hidden">
+						{`Quick answers to questions you may have. Can’t find what you're
+					looking for?`}
+						<br />
+						Check out our full documentation
+					</p>
+					<p className="text-left pl-6 md:hidden block">
+						{`Quick answers to questions you may have. Can’t find what you're
+					looking for?`}
+					</p>
+				</div>
+				{/* Accordion */}
+				<div className="w-full flex justify-center p-0 md:p-16 items-center">
+					<div className="w-full px-4 py-6 md:py-0 md:p-0 md:w-[56%] flex justify-center flex-col gap-5">
+						{frequentlyAskedQuestions.map((question, i) => (
+							<CustomAccordion
+								title={question.question}
+								description={question.answer}
+								key={i}
+							/>
+						))}
+					</div>
 				</div>
 			</section>
 		</>
