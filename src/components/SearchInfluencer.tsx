@@ -9,12 +9,12 @@ export default function SearchInfluencer() {
 	const [selected, setSelected] = useState(influencers[0]);
 
 	return (
-		<div className="inset-0 z-10  w-full">
+		<div className="inset-0 z-[9]  w-full">
 			<Listbox
 				value={selected}
 				onChange={setSelected}>
 				<div className="relative mt-1">
-					<Listbox.Button className="relative border border-slider-bg w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:outline-none focus-visible:border-primary-blue focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2  sm:text-sm">
+					<Listbox.Button className="relative h-11 border border-slider-bg w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:outline-none focus-visible:border-primary-blue focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2  sm:text-sm">
 						<span className="block truncate">{selected.name}</span>
 						<span className="pointer-events-none absolute inset-y-0 right-0 flex items-center p-2 pr-5">
 							<Image

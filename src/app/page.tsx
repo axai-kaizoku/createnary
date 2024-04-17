@@ -5,10 +5,12 @@ import SearchInfluencer from '@/components/SearchInfluencer';
 import { CustomSlider } from '@/components/CustomSlider';
 import CustomAccordion from '@/components/CustomAccordion';
 import { frequentlyAskedQuestions } from '@/constants';
+import NavLinks from '@/components/NavLinks';
 
 export default function Home() {
 	return (
 		<>
+			<NavLinks />
 			{/* Section ONe */}
 			<section className="w-full sm:h-[130vh] md:h-[180vh] lg:h-screen bg-section-one-bg-mobile md:bg-section-one-bg  bg-cover bg-center bg-no-repeat flex lg:justify-between justify-normal lg:flex-row flex-col">
 				<div className="flex flex-col w-full lg:w-2/5 mt-40 py-8 md:py-20 md:pl-10 lg:pl-32 gap-4 md:gap-8">

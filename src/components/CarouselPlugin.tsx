@@ -2,7 +2,6 @@
 import * as React from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 
-import { Card, CardContent } from '@/components/ui/card';
 import {
 	Carousel,
 	CarouselContent,
@@ -15,7 +14,7 @@ import Image from 'next/image';
 export function CarouselPlugin() {
 	const plugin = React.useRef(
 		Autoplay({
-			delay: 1500,
+			delay: 2000,
 			stopOnInteraction: true,
 			stopOnFocusIn: false,
 			stopOnMouseEnter: false,
