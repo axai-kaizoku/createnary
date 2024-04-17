@@ -9,3 +9,14 @@ export interface CustomAccordionProps {
 	title: string;
 	description: string;
 }
+
+export interface DetailPageNumProps {
+	num: string;
+}
+
+export interface DetailPageCompProps {
+	title: string;
+	description: string;
+	img: string;
+	alt: string;
+}

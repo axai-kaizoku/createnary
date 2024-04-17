@@ -29,19 +29,33 @@ export function CarouselPlugin() {
 			onMouseEnter={plugin.current.stop}
 			onMouseLeave={plugin.current.reset}>
 			<CarouselContent>
-				{Array.from({ length: 3 }).map((_, index) => (
-					<CarouselItem
-						key={index}
-						className="flex justify-center">
-						<Image
-							src="/carousel-one.png"
-							alt="carousel-one"
-							width={820}
-							height={505}
-							className="object-contain "
-						/>
-					</CarouselItem>
-				))}
+				<CarouselItem className="flex justify-center">
+					<Image
+						src="/detail-three.png"
+						alt="detail-three"
+						width={820}
+						height={505}
+						className="object-contain "
+					/>
+				</CarouselItem>
+				<CarouselItem className="flex justify-center">
+					<Image
+						src="/detail-one.png"
+						alt="detail-one"
+						width={820}
+						height={505}
+						className="object-contain "
+					/>
+				</CarouselItem>
+				<CarouselItem className="flex justify-center">
+					<Image
+						src="/detail-two.png"
+						alt="detail-two"
+						width={820}
+						height={505}
+						className="object-contain "
+					/>
+				</CarouselItem>
 			</CarouselContent>
 			<CarouselPrevious />
 			<CarouselNext />
