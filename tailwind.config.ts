@@ -18,8 +18,16 @@ const config = {
 			},
 		},
 		extend: {
+			fontFamily: {
+				Monoton: ['Monoton'],
+			},
+			backgroundImage: {
+				'section-one-bg': "url('/background-section-one.png')",
+				'section-one-bg-mobile': "url('/background-section-one-mobile.png')",
+			},
 			colors: {
 				'bg-color': '#F8F9FB',
+				'bg-footer': '#4A508E',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

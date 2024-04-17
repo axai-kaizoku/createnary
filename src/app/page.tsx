@@ -1,18 +1,9 @@
 export default function Home() {
 	return (
-		<main className="h-screen bg-bg-color">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore adipisci
-			enim aspernatur, nihil aut repudiandae. Voluptates est molestias fuga
-			repellat, deleniti cumque corporis voluptatem iure dolores unde quas id.
-			Commodi.enim aspernatur, nihil aut repudiandae. Voluptates est molestias
-			fuga repellat, deleniti cumque corporis voluptatem iure dolores unde quas
-			id. Commodi.enim aspernatur, nihil aut repudiandae. Voluptates est
-			molestias fuga repellat, deleniti cumque corporis voluptatem iure dolores
-			unde quas id. Commodi.enim aspernatur, nihil aut repudiandae. Voluptates
-			est molestias fuga repellat, deleniti cumque corporis voluptatem iure
-			dolores unde quas id. Commodi.enim aspernatur, nihil aut repudiandae.
-			Voluptates est molestias fuga repellat, deleniti cumque corporis
-			voluptatem iure dolores unde quas id. Commodi.
-		</main>
+		<>
+			<div className="h-screen bg-section-one-bg-mobile md:bg-section-one-bg  bg-cover bg-center bg-no-repeat"></div>
+
+			<div className="h-[50vh] w-full bg-bg-color"></div>
+		</>
 	);
 }
