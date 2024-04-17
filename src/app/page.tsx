@@ -1,5 +1,5 @@
 import CustomButton from '@/components/CustomButton';
-import { CarouselPlugin } from '@/components/CustomCarousel';
+import { CarouselPlugin } from '@/components/CarouselPlugin';
 import Image from 'next/image';
 
 export default function Home() {
