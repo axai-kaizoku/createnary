@@ -1,23 +1,41 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import { Slider } from '@/components/ui/slider';
+import { useEffect, useState } from 'react';
+import { CustomSliderProps } from '@/types';
 
-type SliderProps = React.ComponentProps<typeof Slider>;
+export function CustomSlider({
+	defaultValue,
+	minValue,
+	totalValue,
+	steps,
+	symbols,
+	onChange,
+}: CustomSliderProps) {
+	const [value, setValue] = useState<number[]>([400]);
 
-export function CustomSlider({ className, ...props }: SliderProps) {
+	const sendData = (data: number[]) => {
+		onChange(data[0]);
+	};
+
+	useEffect(() => {
+		sendData(value);
+	}, [value]);
+
 	return (
 		<>
 			<Slider
-				defaultValue={[50]}
-				max={100}
-				step={1}
-				className={cn('w-full ', className)}
-				{...props}
+				defaultValue={[defaultValue]}
+				min={minValue}
+				max={totalValue}
+				step={steps}
+				className="w-full"
+				onValueChange={(e: number[]) => setValue(e)}
 			/>
 			<div className="w-full flex justify-center items-center">
 				<span className="rounded-2xl mt-2.5 w-fit px-3 py-2 border-b-2 border-b-primary-blue">
-					500K
+					{value}
+					{symbols}
 				</span>
 			</div>
 		</>

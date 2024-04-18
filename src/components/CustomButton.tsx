@@ -6,6 +6,7 @@ export default function CustomButton({
 	btnText,
 	bgColor,
 	textColor,
+	onClick,
 }: CustomButtonProps) {
 	return (
 		<>
@@ -17,7 +18,8 @@ export default function CustomButton({
 				</Link>
 			) : (
 				<button
-					className={`${bgColor} ${textColor} w-fit  rounded-2xl px-5 py-3`}>
+					className={`${bgColor} ${textColor} w-fit  rounded-2xl px-5 py-3`}
+					onClick={onClick}>
 					{btnText}
 				</button>
 			)}

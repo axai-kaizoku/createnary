@@ -1,12 +1,21 @@
 'use client';
 
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import Image from 'next/image';
 import { influencers } from '@/constants';
+import { SearchInfluencerProps } from '@/types';
 
-export default function SearchInfluencer() {
+export default function SearchInfluencer({ onChange }: SearchInfluencerProps) {
 	const [selected, setSelected] = useState(influencers[0]);
+
+	const sendData = (data: { name: string }) => {
+		onChange(data.name);
+	};
+
+	useEffect(() => {
+		sendData(selected);
+	}, [selected]);
 
 	return (
 		<div className="inset-0 z-[9]  w-full">

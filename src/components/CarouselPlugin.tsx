@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/carousel';
 import Image from 'next/image';
 
-export function CarouselPlugin() {
+export default function CarouselPlugin() {
 	const plugin = React.useRef(
 		Autoplay({
 			delay: 2000,

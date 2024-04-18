@@ -1,11 +1,10 @@
-import CustomButton from '@/components/CustomButton';
-import { CarouselPlugin } from '@/components/CarouselPlugin';
 import Image from 'next/image';
-import SearchInfluencer from '@/components/SearchInfluencer';
-import { CustomSlider } from '@/components/CustomSlider';
+import CustomButton from '@/components/CustomButton';
+import CarouselPlugin from '@/components/CarouselPlugin';
+import CalculationSection from '@/components/CalculationSetion';
 import CustomAccordion from '@/components/CustomAccordion';
-import { frequentlyAskedQuestions } from '@/constants';
 import NavLinks from '@/components/NavLinks';
+import { frequentlyAskedQuestions } from '@/constants';
 
 export default function Home() {
 	return (
@@ -87,52 +86,7 @@ export default function Home() {
 				<h3 className="text-left pl-6 md:pl-0 md:text-center font-bold text-xl md:text-2xl pt-6 pb-0 md:pt-20 md:pb-20">
 					ESTIMATE EARNING POTENTIAL
 				</h3>
-				<div className="w-full flex md:flex-row flex-col justify-center items-center">
-					<div className="flex flex-col w-full px-6 md:p-0 md:w-2/5   md:pl-20 gap-4">
-						<div className="flex flex-col gap-5 md:gap-8 py-2 md:py-4">
-							<p className="font-medium">What kind of influencer are you?</p>
-							<SearchInfluencer />
-						</div>
-						<div className="flex flex-col gap-5 md:gap-8 py-2 md:py-4">
-							<p className="font-medium">How many followers do you have?</p>
-							<CustomSlider />
-						</div>
-						<div className="flex flex-col gap-5 md:gap-8 py-2 md:py-4">
-							<p className="font-medium">
-								How many products do you list monthly?
-							</p>
-							<CustomSlider />
-						</div>
-					</div>
-					<div className="w-full flex md:hidden justify-center items-center py-8 md:py-16">
-						<CustomButton
-							btnText="Calculate"
-							bgColor="bg-primary-blue"
-							textColor="text-primary-white"
-						/>
-					</div>
-					<div className="flex flex-row md:flex-col font-bold items-center text-center justify-around md:justify-center mt-8 gap-10 md:gap-28 w-2/6">
-						<div className="flex flex-col gap-3">
-							<h4 className="text-xl">Monthly Earning</h4>
-							<p className="text-2xl md:text-4xl text-primary-blue">₹12,000</p>
-						</div>
-						<div className="flex flex-col gap-3">
-							<h4 className="text-xl whitespace-break-spaces">
-								Yearly Earning
-							</h4>
-							<p className="text-2xl md:text-4xl text-primary-blue">
-								₹1,44,000
-							</p>
-						</div>
-					</div>
-				</div>
-				<div className="w-full hidden md:flex justify-center items-center py-16">
-					<CustomButton
-						btnText="Calculate"
-						bgColor="bg-primary-blue"
-						textColor="text-primary-white"
-					/>
-				</div>
+				<CalculationSection />
 			</section>
 			{/* Section Four */}
 			<section className="bg-primary-white w-full h-fit">
